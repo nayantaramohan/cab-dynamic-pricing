@@ -25,7 +25,7 @@ Please note that the access to this application is restricted among uw.edu, logi
 ![image5](./screenshots/image5.png)
 
 ## Step 7:
-For accurate predictions in the model, kindly restrict to locations within Boston.  
+For accurate predictions in the model, kindly restrict to locations within Boston to avoid inaccuracies.  
 Type your source and destination and select the kind of Uber and Lyft app which you would like to compare.
 ![image6](./screenshots/image6.png) 
 ![image7](./screenshots/image7.png) 
