@@ -20,6 +20,7 @@ install:
 
 
 # a list of commands to run before the main script
+#Since the feedback loop is in development some variables are assigned but not used, ignoring F841, which highlights them
 before_script:
     - "flake8 --ignore=F841 cab-dynamic-pricing"
 
@@ -28,8 +29,11 @@ script:
     - coverage run -m unittest discover
 
 # generate a coverage report to send to back to user
+# We have written and run tests for all the working pricing inference code in the repository. Some of the files are placeholder 
+# test files for feedback app which is in progress. It is important to note APIs aren't tested using unittest because of API key security, 
+# hence the app.py has a low coverage. We try to test the interface of API in test files to validate actual modules.
 after_success:
-    - cd cab-dynamic-pricing/tests/
-    - coverage run -m unittest discover
+    - cd cab-dynamic-pricing
+    - coverage run --source=app,model_scripts,configuration_files,tests -m unittest discover tests/
     - coverage report -m
     - coveralls

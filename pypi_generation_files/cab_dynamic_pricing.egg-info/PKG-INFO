@@ -1,3 +1,18 @@
+Metadata-Version: 2.1
+Name: cab-dynamic-pricing
+Version: 1.0.0
+Summary: A web application for calculating dynamic price of Uber and Lyft cabs depending on various parameters
+Home-page: https://github.com/rohitl17/cab-dynamic-pricing
+Author: ['Nayantara Mohan', 'Rohit Lokwani', 'Shubha Changappa Palachanda']
+Author-email: rlokwani@uw.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 [![Build Status](https://app.travis-ci.com/rohitl17/cab-dynamic-pricing.svg?branch=main)](https://app.travis-ci.com/rohitl17/cab-dynamic-pricing) [![Coverage Status](https://coveralls.io/repos/github/rohitl17/cab-dynamic-pricing/badge.svg?branch=main)](https://coveralls.io/github/rohitl17/cab-dynamic-pricing?branch=main) ![contributors](https://img.shields.io/github/contributors/rohitl17/cab-dynamic-pricing.svg) ![codesize](https://img.shields.io/github/languages/code-size/rohitl17/cab-dynamic-pricing.svg)
 
 ![logo file](/cab-dynamic-pricing/templates/logo.jpg)
@@ -117,18 +132,16 @@ Method 1: Cloning the Github Repository:
 ```bash
 git clone https://github.com/rohitl17/cab-dynamic-pricing.git
 ```
-2. If you're using Anaconda, create and activate a new conda environment. For conda run
-```
-conda create -n cabdynamicpricing python=3.9
-conda activate cabdynamicpricing
-```
-
-  If you do not have anaconda, create a virtual environment in the root of the repo
+2. Create a virtual environment in the root of the repo
 ```bash
 python -m venv venv
 source venv/bin/activate
 ```
-
+If you're using Anaconda, create and activate a new conda environment. For conda run
+```
+conda create --name cabdynamicpricing
+conda activate cabdynamicpricing
+```
 3. Install the dependencies from the requirements.txt file using the below:
 ```bash
 python -m pip install -r requirements.txt
@@ -147,4 +160,6 @@ python -m pip install -r requirements.txt
 
 ## Usage and Output
 
-To see how to use the package to get the dynamic pricing of Uber and Lyft, refer to the [example file](./examples/example.md)
+To see how to use the package to get the dynamic pricing of Uber and Lyft, refer to the [example file](./example/example.md)
+
+

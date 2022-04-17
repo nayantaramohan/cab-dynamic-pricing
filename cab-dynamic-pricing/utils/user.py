@@ -32,9 +32,12 @@ class User(UserMixin):
         specific_user_details = \
             user_information.loc[user_information['user_id'] == user_id]
 
-        return User(specific_user_details['user_id'][0],
-                    specific_user_details['name'][0],
-                    specific_user_details['email'][0])
+        if specific_user_details.shape[0] != 0:
+            return User(specific_user_details['user_id'].values[0],
+                        specific_user_details['name'].values[0],
+                        specific_user_details['email'].values[0])
+        else:
+            return None
 
     @staticmethod
     def create(id_, name, email):
